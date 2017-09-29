@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">MeiCai</string>
+
+
+    <!--tab bar 名称-->
+    <string name="tab_all">全部菜品</string>
+    <string name="tab_list">常用清单</string>
+    <string name="tab_shopcar">购物车</string>
+    <string name="tab_mine">我的</string>
+</resources>

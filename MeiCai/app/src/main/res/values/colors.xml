@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#8DC420</color>
+    <color name="colorPrimaryDark">#8DC420</color>
+    <color name="colorAccent">#8DC420</color>
+
+    <color name="colorRed">#F45C5C</color>
+    <color name="colorRedAlpa">#f4F45C5C</color>
+
+
+    <color name="colorGray">#cecece</color>
+    <color name="color9">#999999</color>
+    <color name="color6">#666666</color>
+    <color name="color3">#333333</color>
+    <color name="backgroundColor">#EEEEEE</color>
+    <color name="colorSepaLine">#0f000000</color>
+    <color name="colorWhite">#FFFFFF</color>
+</resources>

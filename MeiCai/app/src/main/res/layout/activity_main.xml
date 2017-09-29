@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.chenhuamou.meicai.MainActivity">
+
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/view_divide">
+
+    </android.support.v4.view.ViewPager>
+
+
+    <View
+        android:id="@+id/view_divide"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorSepaLine"
+        android:layout_above="@+id/tabBar"/>
+
+    <!--底部 tabBar-->
+    <LinearLayout
+        android:id="@+id/tabBar"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true">
+
+
+        <!--全部商品-->
+        <LinearLayout
+            android:id="@+id/tab_ll_all"
+            style="@style/tabBar_layout_style">
+
+            <ImageView
+                android:id="@+id/img_all"
+                style="@style/tabBar_icon_style"
+                android:background="@drawable/tab_product_none"/>
+
+            <TextView
+                android:id="@+id/tv_tab_all"
+                android:text="@string/tab_all"
+                style="@style/tabBar_tv_style" />
+
+        </LinearLayout>
+
+        <!--常用清单-->
+        <LinearLayout
+            android:id="@+id/tab_ll_list"
+            style="@style/tabBar_layout_style">
+
+            <!--购物车-->
+            <ImageView
+                android:id="@+id/img_list"
+                style="@style/tabBar_icon_style"
+                android:background="@drawable/tab_shopcard_none"/>
+            <TextView
+                android:id="@+id/tv_tab_list"
+                android:text="@string/tab_shopcar"
+                style="@style/tabBar_tv_style"/>
+
+        </LinearLayout>
+
+        <!--购物车-->
+        <LinearLayout
+            android:id="@+id/tab_ll_shopcar"
+            style="@style/tabBar_layout_style">
+
+            <ImageView
+                android:id="@+id/img_shopcar"
+                style="@style/tabBar_icon_style"
+                android:background="@drawable/tab_order_none"/>
+
+            <TextView
+                android:id="@+id/tv_tab_shopcar"
+                android:text="@string/tab_shopcar"
+                style="@style/tabBar_tv_style"/>
+
+        </LinearLayout>
+
+        <!--我的-->
+        <LinearLayout
+            android:id="@+id/tab_ll_mine"
+            style="@style/tabBar_layout_style">
+
+            <ImageView
+                android:id="@+id/img_mine"
+                style="@style/tabBar_icon_style"
+                android:background="@drawable/tab_my_none"/>
+
+            <TextView
+                android:id="@+id/tv_tab_mine"
+                android:text="@string/tab_mine"
+                style="@style/tabBar_tv_style"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>
