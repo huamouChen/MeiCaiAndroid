@@ -1,11 +1,445 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
 
-    <TextView
+<ScrollView android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:scrollbars="none">
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="This is mine Fragment!"/>
+        android:orientation="vertical">
 
-</LinearLayout>
+        <!--个人信息-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:background="@color/colorPrimary">
+
+            <!--消息提醒-->
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="15dp">
+
+                <ImageView
+                    android:id="@+id/iv_msg"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@color/color3"/>
+
+                <com.example.chenhuamou.meicai.util.RoundImageView
+                    android:id="@+id/iv_redpoint"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:background="@color/colorRed"/>
+
+            </RelativeLayout>
+
+            <!--用户头像-->
+            <com.example.chenhuamou.meicai.util.RoundImageView
+                android:id="@+id/avatar"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginBottom="20dp"
+                android:layout_alignParentBottom="true"
+                android:src="@drawable/bitmap"/>
+
+            <!--用户名称-->
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorWhite"
+                android:text="用户名称"
+                android:layout_toRightOf="@+id/avatar"
+                android:layout_alignTop="@+id/avatar"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"/>
+
+            <!--用户级别-->
+            <TextView
+                android:id="@+id/tv_level"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorWhite"
+                android:text="普通会员"
+                android:layout_below="@+id/tv_name"
+                android:layout_alignLeft="@+id/tv_name"
+                android:layout_marginTop="15dp"/>
+
+            <TextView
+                android:id="@+id/tv_account_manager"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorWhite"
+                android:text="账户管理"
+                android:layout_toLeftOf="@+id/iv_right_arrow"
+                android:layout_marginRight="10dp"
+                android:layout_alignBottom="@+id/iv_right_arrow"/>
+
+            <!--向右的箭头-->
+            <ImageView
+                android:id="@+id/iv_right_arrow"
+                android:src="@mipmap/right_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="20dp"
+                android:layout_marginRight="15dp"/>
+
+
+
+        </RelativeLayout>
+
+
+        <!--我的钱包-->
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="8dp"
+            android:background="@color/backgroundColor" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                style="@style/mine_section_textView_style"
+                android:text="我的钱包" />
+        </RelativeLayout>
+        <!--分割线-->
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:background="@color/colorSepaLine"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/tv_banlance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorRed"
+                    android:text="0"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/color9"
+                    android:text="钱包余额"/>
+
+            </LinearLayout>
+
+            <!--分割线-->
+            <View
+                android:layout_width="1dp"
+                android:layout_height="75dp"
+                android:background="@color/colorSepaLine"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/tv_coupon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorRed"
+                    android:text="0"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/color9"
+                    android:text="优惠券"/>
+
+            </LinearLayout>
+
+            <!--分割线-->
+            <View
+                android:layout_width="1dp"
+                android:layout_height="75dp"
+                android:background="@color/colorSepaLine"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/tv_online"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorRed"
+                    android:text="在线预付"
+                    android:textSize="20sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/color9"
+                    android:text="预付余额"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <!--我的订单-->
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="8dp"
+            android:background="@color/backgroundColor"
+            android:layout_alignParentTop="true"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                style="@style/mine_section_textView_style"
+                android:text="我的订单" />
+
+            <Button
+                style="@style/mine_section_button_style"
+                android:text="查看全部订单" />
+        </RelativeLayout>
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:background="@color/colorSepaLine" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <!--待付款-->
+            <Button
+                android:id="@+id/btn_pending_pay"
+                style="@style/mine_help_center_style"
+                android:text="待付款"
+                android:drawableTop="@mipmap/bt_setting"
+                />
+
+            <!--待发货-->
+            <Button
+                android:id="@+id/btn_pending_send"
+                style="@style/mine_help_center_style"
+                android:text="待发货"
+                android:drawableTop="@mipmap/bt_setting" />
+
+            <!--待收货-->
+            <Button
+                android:id="@+id/btn_pending_receive"
+                style="@style/mine_help_center_style"
+                android:text="待收货"
+                android:drawableTop="@mipmap/bt_setting" />
+
+
+        </LinearLayout>
+
+        <!--常用工具-->
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="8dp"
+            android:background="@color/backgroundColor"
+            android:layout_alignParentTop="true"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                style="@style/mine_section_textView_style"
+                android:text="常用工具" />
+
+        </RelativeLayout>
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:background="@color/colorSepaLine" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <!--常见问题-->
+            <Button
+                style="@style/mine_help_center_style"
+                android:text="我的钥匙"
+                android:drawableTop="@mipmap/bt_setting" />
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/colorSepaLine"/>
+
+            <!--服务中心-->
+            <Button
+                style="@style/mine_help_center_style"
+                android:text="常用清单"
+                android:drawableTop="@mipmap/bt_setting" />
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/colorSepaLine"/>
+
+            <!--在线客服-->
+            <Button
+                style="@style/mine_help_center_style"
+                android:text="退押金"
+                android:drawableTop="@mipmap/bt_setting" />
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/colorSepaLine"/>
+
+            <!--客服电话-->
+            <Button
+                style="@style/mine_help_center_style"
+                android:text="新品需求"
+                android:drawableTop="@mipmap/bt_setting" />
+
+        </LinearLayout>
+        <!--分割线-->
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:background="@color/colorSepaLine"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:orientation="horizontal"
+            android:gravity="center" >
+
+            <!--常见问题-->
+            <Button
+                style="@style/mine_help_center_style"
+                android:text="我的发票"
+                android:drawableTop="@mipmap/bt_setting" />
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/colorSepaLine"/>
+
+            <!--服务中心-->
+            <Button
+                style="@style/mine_help_center_style"
+                android:text="经营分析"
+                android:drawableTop="@mipmap/bt_setting" />
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/colorSepaLine"/>
+            <Button
+                style="@style/mine_help_center_style" />
+            <Button
+                style="@style/mine_help_center_style" />
+
+        </LinearLayout>
+
+
+        <!--帮助中心-->
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="8dp"
+            android:background="@color/backgroundColor"
+            android:layout_alignParentTop="true"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                style="@style/mine_section_textView_style"
+                android:text="帮助中心" />
+
+            <Button
+                style="@style/mine_section_button_style"
+                android:text="进入客户服务中心 " />
+
+
+        </RelativeLayout>
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:background="@color/colorSepaLine" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <!--常见问题-->
+            <Button
+                style="@style/mine_help_center_style"
+                android:text="常见问题"
+                android:drawableTop="@mipmap/bt_setting" />
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/colorSepaLine"/>
+
+            <!--服务中心-->
+            <Button
+                style="@style/mine_help_center_style"
+                android:text="服务中心"
+                android:drawableTop="@mipmap/bt_setting" />
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/colorSepaLine"/>
+
+            <!--在线客服-->
+            <Button
+                style="@style/mine_help_center_style"
+                android:text="在线客服"
+                android:drawableTop="@mipmap/bt_setting" />
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/colorSepaLine"/>
+
+            <!--客服电话-->
+            <Button
+                style="@style/mine_help_center_style"
+                android:text="客服电话"
+                android:drawableTop="@mipmap/bt_setting" />
+
+        </LinearLayout>
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="8dp"
+            android:background="@color/backgroundColor"
+            android:layout_alignParentTop="true"/>
+
+    </LinearLayout>
+
+</ScrollView>
+

@@ -162,7 +162,7 @@ public class MainActivity extends AppCompatActivity implements ViewPager.OnPageC
     public void onPageScrollStateChanged(int state) {
 
     }
-    
+
     /*
     * viewPager Adapter
     * */

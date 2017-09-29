@@ -61,7 +61,7 @@
                 android:background="@drawable/tab_shopcard_none"/>
             <TextView
                 android:id="@+id/tv_tab_list"
-                android:text="@string/tab_shopcar"
+                android:text="@string/tab_list"
                 style="@style/tabBar_tv_style"/>
 
         </LinearLayout>
