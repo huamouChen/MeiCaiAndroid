@@ -7,4 +7,18 @@
     <string name="tab_list">常用清单</string>
     <string name="tab_shopcar">购物车</string>
     <string name="tab_mine">我的</string>
+
+
+    <string-array name="tabLayoutLists">
+        <item>新鲜蔬菜</item>
+        <item>肉禽类</item>
+        <item>方便菜</item>
+        <item>水产冻货</item>
+        <item>蛋品质面</item>
+        <item>米面粮油</item>
+        <item>休闲酒饮</item>
+        <item>调料干货</item>
+        <item>时令水果</item>
+        <item>餐厨用品</item>
+    </string-array>
 </resources>

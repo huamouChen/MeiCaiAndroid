@@ -131,7 +131,6 @@ public class ClassFragment extends BaseFragment {
         public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
             MyViewHolder viewHolder = (MyViewHolder) holder;
             ProductClass productClass = mList.get(position);
-            System.out.println("----------------------"+productClass.getClassname());
             viewHolder.textView.setText(productClass.getClassname());
             if (position == 1) {
                 viewHolder.textView.setBackgroundColor(getResources().getColor(R.color.colorWhite));

@@ -1,26 +1,108 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="horizontal"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/ll">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/colorWhite"
+        android:gravity="center_vertical">
 
-    <fragment
-        android:name="com.example.chenhuamou.meicai.fragment.ClassFragment"
-        android:id="@+id/frag_class"
-        android:layout_width="80dp"
-        android:layout_height="match_parent"/>
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:src="@mipmap/bt_setting"/>
 
-    <fragment
-        android:id="@+id/frag_product"
-        android:name="com.example.chenhuamou.meicai.fragment.ProductFragment"
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="春栗大豆油"/>
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:src="@mipmap/bt_setting"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:gravity="center_vertical"
+        android:background="@color/colorYellow">
+
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:src="@mipmap/bt_setting"/>
+
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="无清单 不采购，点击购买"
+            android:textSize="14sp"
+            android:textColor="@color/colorTxtRed"/>
+
+        <ImageView
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:src="@mipmap/right_arrow"/>
+
+    </LinearLayout>
+
+    <!--tabLayout-->
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tabLayout"
         android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_weight="1"/>
+        android:layout_height="wrap_content"
+        app:tabMode="scrollable"
+        app:tabSelectedTextColor="@color/colorPrimary"
+        app:tabTextColor="@color/color9"
+        android:background="@color/colorWhite"/>
 
+    <!--分割线-->
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="3dp"
+        android:background="@drawable/sepaline_gradient"
+        />
 
+    <!--左右两个表格的fragment-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal">
 
+        <fragment
+            android:name="com.example.chenhuamou.meicai.fragment.ClassFragment"
+            android:id="@+id/frag_class"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"/>
+
+        <fragment
+            android:id="@+id/frag_product"
+            android:name="com.example.chenhuamou.meicai.fragment.ProductFragment"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
 
 
 </LinearLayout>

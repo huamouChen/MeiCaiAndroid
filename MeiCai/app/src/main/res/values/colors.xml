@@ -8,6 +8,11 @@
     <color name="colorRedAlpa">#f4F45C5C</color>
 
 
+    <color name="colorYellow">#FFF7A9</color>
+
+    <color name="colorTxtRed">#dd8d3a</color>
+
+
     <color name="colorGray">#cecece</color>
     <color name="color9">#999999</color>
     <color name="color6">#666666</color>
