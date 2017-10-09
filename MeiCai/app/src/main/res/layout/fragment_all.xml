@@ -15,22 +15,43 @@
         <ImageView
             android:layout_width="20dp"
             android:layout_height="20dp"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
             android:src="@mipmap/bt_setting"/>
 
-        <TextView
+        <RelativeLayout
             android:layout_weight="1"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="春栗大豆油"/>
+            android:layout_height="30dp"
+            android:background="@drawable/searchbar_bg"
+            android:gravity="center">
+
+
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:src="@mipmap/bt_setting"
+                android:layout_toLeftOf="@+id/tv_search"
+                android:layout_marginRight="5dp"
+                android:layout_centerVertical="true"/>
+
+            <TextView
+                android:id="@+id/tv_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/color6"
+                android:textSize="14sp"
+                android:text="春栗大豆油"
+                android:layout_marginVertical="10dp"
+                android:layout_centerInParent="true"/>
+        </RelativeLayout>
 
         <ImageView
             android:layout_width="20dp"
             android:layout_height="20dp"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
             android:src="@mipmap/bt_setting"/>
 
     </LinearLayout>
