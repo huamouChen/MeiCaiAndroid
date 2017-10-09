@@ -4,12 +4,10 @@ import android.os.Handler;
 import android.os.Message;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.TextView;
 
 import com.example.chenhuamou.meicai.R;
+import com.example.chenhuamou.meicai.adapter.ProductClassAdapter;
 import com.example.chenhuamou.meicai.model.ProductClass;
 import com.example.chenhuamou.meicai.util.ConstantUtil;
 import com.google.gson.Gson;
@@ -41,7 +39,7 @@ public class ClassFragment extends BaseFragment {
     private OkHttpClient mOkHttpClient = new OkHttpClient();
 
     private List<ProductClass> mList = new ArrayList<>();
-    private MyAdapter mAdapter;
+    private ProductClassAdapter mAdapter;
 
     private Handler mHandle = new Handler(){
         @Override
@@ -64,8 +62,18 @@ public class ClassFragment extends BaseFragment {
         LinearLayoutManager llm = new LinearLayoutManager(getActivity());
         mRecycleView.setLayoutManager(llm);
 
-        mAdapter = new MyAdapter(mList);
+        mAdapter = new ProductClassAdapter(getContext(), mList);
         mRecycleView.setAdapter(mAdapter);
+        mAdapter.setmOnItemClickListener(new ProductClassAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(View view, int position) {
+                // 更改当前的position
+                mAdapter.currentIndex = position;
+                // 刷新数据
+                mAdapter.notifyDataSetChanged();
+            }
+        });
+
     }
 
 
@@ -111,47 +119,4 @@ public class ClassFragment extends BaseFragment {
     public void startdestory() {
 
     }
-
-    private class MyAdapter extends RecyclerView.Adapter {
-        private List<ProductClass> mData;
-
-        public MyAdapter(List<ProductClass> data) {
-           mData = data;
-        }
-
-
-        @Override
-        public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-            View view = LayoutInflater.from(getActivity()).inflate(R.layout.view_all_class_cell, parent, false);
-            MyViewHolder viewHolder = new MyViewHolder(view);
-            return viewHolder;
-        }
-
-        @Override
-        public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
-            MyViewHolder viewHolder = (MyViewHolder) holder;
-            ProductClass productClass = mList.get(position);
-            viewHolder.textView.setText(productClass.getClassname());
-            if (position == 1) {
-                viewHolder.textView.setBackgroundColor(getResources().getColor(R.color.colorWhite));
-            }
-        }
-
-        @Override
-        public int getItemCount() {
-            return mData.size();
-        }
-
-
-        private class MyViewHolder extends RecyclerView.ViewHolder {
-            private TextView textView;
-
-            public MyViewHolder(View itemView) {
-                super(itemView);
-                textView = itemView.findViewById(R.id.tv_name);
-            }
-        }
-    }
-
-
 }
