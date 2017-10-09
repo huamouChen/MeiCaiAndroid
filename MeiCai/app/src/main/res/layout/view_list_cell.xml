@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/iv_pic"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        app:placeholderImage="@drawable/bitmap"/>
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/iv_pic"
+        android:textColor="@color/color6"
+        android:textSize="14dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:text="黄心土豆 常温 通货"/>
+
+    <TextView
+        android:id="@+id/tv_unit_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tv_name"
+        android:textColor="@color/color9"
+        android:textSize="12dp"
+        android:layout_below="@+id/tv_name"
+        android:layout_marginTop="20dp"
+        android:text="￥1.09-1.35/斤"/>
+
+    <TextView
+        android:id="@+id/tv_have"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="已有"
+        android:textSize="10sp"
+        android:textColor="@color/colorWhite"
+        android:background="@color/colorRed"
+        android:padding="2dp"
+        android:layout_toLeftOf="@+id/tv_buy_count"
+        android:layout_alignTop="@+id/tv_buy_count"/>
+
+    <TextView
+        android:id="@+id/tv_buy_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/text_border_red"
+        android:text="4444人购买"
+        android:padding="2dp"
+        android:textSize="10sp"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"/>
+
+    <Button
+        android:id="@+id/btn_select"
+        android:layout_width="50dp"
+        android:layout_height="25dp"
+        android:text="选规格"
+        android:textSize="10sp"
+        android:layout_alignRight="@+id/tv_buy_count"
+        android:layout_below="@+id/tv_buy_count"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/colorPrimary"
+        android:background="@drawable/btn_select"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/backgroundColor"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/btn_select"
+        android:layout_marginLeft="10dp"/>
+
+
+
+
+</RelativeLayout>

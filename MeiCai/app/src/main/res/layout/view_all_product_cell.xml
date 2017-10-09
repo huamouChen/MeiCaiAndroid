@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:background="@color/colorWhite">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/iv_pic"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        fresco:placeholderImage="@drawable/bitmap"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"/>
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="菜心 本地"
+        android:textColor="@color/color3"
+        android:textSize="14dp"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/iv_pic"
+        android:layout_alignTop="@+id/iv_pic"/>
+
+    <TextView
+        android:id="@+id/tv_weight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="￥11.45/袋（10斤）"
+        android:textSize="12sp"
+        android:textColor="@color/color6"
+        android:layout_alignLeft="@+id/tv_name"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/tv_name"/>
+
+    <TextView
+        android:id="@+id/tv_unit_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textColor="@color/color9"
+        android:layout_alignLeft="@+id/tv_weight"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/tv_weight"
+        android:text="￥2.79/斤"/>
+
+    <Button
+        android:id="@+id/btn_buy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="选购"
+        android:textColor="@color/colorPrimary"
+        android:layout_alignParentRight="true"
+        android:layout_alignBottom="@+id/tv_unit_price"
+        android:layout_marginRight="10dp"
+        android:background="@null"
+        android:gravity="bottom|center_horizontal"/>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/backgroundColor"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="10dp"/>
+
+
+
+
+</RelativeLayout>

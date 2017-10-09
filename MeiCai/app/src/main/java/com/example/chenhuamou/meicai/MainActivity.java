@@ -64,7 +64,10 @@ public class MainActivity extends AppCompatActivity implements ViewPager.OnPageC
         // tabBar 默认选中0
         setTabBarSelectedIndex(mSelectIndex);
 
+
         mViewPager.setAdapter(new MyAdapter(getSupportFragmentManager()));
+        // 设置 最大缓存数， 不然每次都会重新创建，然后 首页 嵌套的两个fragment也会被重新创建，然后就冲突出错
+        mViewPager.setOffscreenPageLimit(4);
         mViewPager.addOnPageChangeListener(this);
     }
 
