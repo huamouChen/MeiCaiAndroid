@@ -30,6 +30,9 @@ public class ProductClassAdapter extends RecyclerView.Adapter implements View.On
         this.mData = list;
     }
 
+    /*
+    * View 的点击事件
+    * */
     @Override
     public void onClick(View view) {
         // 把点击事件传递给自定义的接口
@@ -39,15 +42,18 @@ public class ProductClassAdapter extends RecyclerView.Adapter implements View.On
     }
 
 
-    public void setmOnItemClickListener(OnItemClickListener listener) {
-        this.mOnItemClickListener = listener;
-    }
-
     /*
     * 定义点击的接口，让外部来实现
     * */
     public interface OnItemClickListener {
         void onItemClick(View view, int position);
+    }
+
+    /*
+    * set 方法
+    * */
+    public void setmOnItemClickListener(OnItemClickListener listener) {
+        this.mOnItemClickListener = listener;
     }
 
 
@@ -68,12 +74,13 @@ public class ProductClassAdapter extends RecyclerView.Adapter implements View.On
         ProductClass productClass = mData.get(position);
         viewHolder.textView.setText(productClass.getClassname());
 
+        // 设置点击变色
         if (currentIndex == position) {
             viewHolder.itemView.setBackgroundColor(mContext.getResources().getColor(R.color.colorWhite));
         } else  {
             viewHolder.itemView.setBackgroundColor(mContext.getResources().getColor(R.color.backgroundColor));
         }
-        
+
     }
 
 
